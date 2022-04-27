@@ -75,4 +75,35 @@ public class Nematode {
         this.eyes = eyes;
     }
 
+    float temp;
+
+    public void render(NematodeVisualiser pa) {
+
+        float y = pa.height / 4;
+        float x = pa.width / 2;
+
+        // Displays name of nematoad
+        pa.text(name, x - 10, y - 100);
+
+        pa.stroke(255);
+        pa.noFill();
+
+        // Makes the body of the dude
+        for (int i = 0; i < length; i++) {
+            temp = y + (i * 40);
+            pa.circle(x, temp, 40);
+            // Make toes
+            if (limbs = true) {
+                pa.line(x + 40, temp, x + 20, temp);
+                pa.line(x - 40, temp, x - 20, temp);
+            }
+        }
+
+        // Make eyes
+        if (eyes = true) {
+            pa.line(x, temp + 20, x, temp + 40);
+            pa.circle(x, temp + 44, 5);
+        }
+
+    }
 }
