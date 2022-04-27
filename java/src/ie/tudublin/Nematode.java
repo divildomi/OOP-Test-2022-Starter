@@ -93,16 +93,36 @@ public class Nematode {
             temp = y + (i * 40);
             pa.circle(x, temp, 40);
             // Make limbs
-            if (limbs = true) {
+            if (isLimbs()) {
                 pa.line(x + 40, temp, x + 20, temp);
                 pa.line(x - 40, temp, x - 20, temp);
             }
         }
 
-        // Make tail
-        if (gender == "m") {
+        // Make tail for male
+        if (gender.contains("m")) {
             pa.line(x, temp + 20, x, temp + 40);
             pa.circle(x, temp + 44, 5);
+        }
+
+        // Make circle for female
+        if (gender.contains("f")) {
+            pa.circle(x, temp, 20);
+        }
+
+        // Make both circle and tail
+        if (gender.contains("h")) {
+            pa.line(x, temp + 20, x, temp + 40);
+            pa.circle(x, temp + 44, 5);
+            pa.circle(x, temp, 20);
+        }
+
+        // Make eyes
+        if (isEyes()) {
+            pa.line(x - 15, y - 15, x - 30, y - 30);
+            pa.line(x + 15, y - 15, x + 30, y - 30);
+            pa.circle(x - 32, y - 32, 5);
+            pa.circle(x + 32, y - 32, 5);
         }
 
     }
