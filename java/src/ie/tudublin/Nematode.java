@@ -79,11 +79,13 @@ public class Nematode {
 
     public void render(NematodeVisualiser pa) {
 
-        float y = pa.height / 4;
+        float y = pa.height / 2;
         float x = pa.width / 2;
 
         // Displays name of nematode
-        pa.text(name, x - 10, y - 100);
+        pa.text(name, x, y - 100);
+        pa.textAlign(pa.CENTER, pa.CENTER);
+        pa.textSize(20);
 
         pa.stroke(255);
         pa.noFill();
