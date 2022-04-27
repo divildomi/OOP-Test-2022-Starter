@@ -87,7 +87,7 @@ public class Nematode {
         pa.textAlign(pa.CENTER, pa.CENTER);
         pa.textSize(20);
 
-        pa.stroke(0);
+        pa.stroke(255);
         pa.noFill();
 
         // Makes the body of the worm
