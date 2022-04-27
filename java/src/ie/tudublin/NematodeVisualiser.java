@@ -61,17 +61,15 @@ public class NematodeVisualiser extends PApplet {
 	}
 
 	public void draw() {
+		background(0);
+		drawNematodes();
 		drawArrow(600, 400, 40, 0);
 		drawArrow(200, 400, 40, 180);
 
-		strokeWeight(0);
-		background(0);
-		drawNematodes();
-
 	}
 
-	void drawArrow(int cx, int cy, int len, float angle) {
-		strokeWeight(50);
+	// draw arrows
+	public void drawArrow(int cx, int cy, int len, float angle) {
 		pushMatrix();
 		translate(cx, cy);
 		rotate(radians(angle));
